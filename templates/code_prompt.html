@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Secret Code</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #fefefe;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+.form-box {
+background: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0,0,0,0.15);
+max-width: 350px;
+width: 90%;
+}
+input[type="text"] {
+width: 100%;
+padding: 10px;
+margin-top: 10px;
+margin-bottom: 20px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+input[type="submit"] {
+background-color: #28a745;
+border: none;
+color: white;
+padding: 12px;
+width: 100%;
+border-radius: 5px;
+}
+.error {
+color: red;
+}
+</style>
+</head>
+<body>
+<div class="form-box">
+<h3>Enter Secret Code</h3>
+<form method="POST">
+<input type="text" name="secret_code" placeholder="Enter code here">
+<input type="submit" value="Submit">
+</form>
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+</div>
+</body>
+</html>
